@@ -1,9 +1,9 @@
 {
-  "name": "global-training-directory",
+  "name": "schoolmap",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Global Training Directory / Annuaire Mondial des Formations",
+  "description": "SchoolMap / Annuaire Mondial des Formations",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

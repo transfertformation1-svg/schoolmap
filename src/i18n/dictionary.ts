@@ -2,7 +2,7 @@ import type { Lang } from '../lib/types';
 
 export const dictionary = {
   en: {
-    title: 'Global Training Directory',
+    title: 'SchoolMap',
     subtitle: 'Annuaire Mondial des Formations',
     tagline: 'Free & financed learning resources, grouped by continent, country and pathway.',
     searchPlaceholder: 'Search by keyword, country, category… (e.g. Python, Data Science, Coursera)',
@@ -36,7 +36,7 @@ export const dictionary = {
     darkMode: 'Dark mode',
   },
   fr: {
-    title: 'Annuaire Mondial des Formations',
+    title: 'SchoolMap',
     subtitle: 'Global Training Directory',
     tagline: 'Ressources gratuites & financées, classées par continent, pays et parcours.',
     searchPlaceholder: 'Rechercher par mot-clé, pays, catégorie… (ex. Python, Data Science, Coursera)',
