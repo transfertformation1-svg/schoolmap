@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "schoolEduc / Annuaire Mondial des Formations",
+  "description": "SchoolEduc / Annuaire Mondial des Formations",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
