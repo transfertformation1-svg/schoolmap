@@ -21,7 +21,7 @@ npm run dev
 - `src/data/trainingData.json` — **195 countries** (6 enriched: ZA/FR/US/IN/AU/BR + 189 with UNESCO/Coursera/Khan/edX), **1988 resources** (incl. **197 national libraries**, 1 per country + ZA/FR extras, and **980 free-resource sites**, 5 per country: Internet Archive, MIT OCW, OpenLearn, Saylor, OpenStax)
 - `src/data/guides.json` — Coursera Financial Aid + local tips
 - `src/components/` — Header, ContinentSection, CountryCard, TrainingCard, ResourceModal, EmptyState, Footer
-- `src/App.tsx` — state + layout
+- `src/App.tsx` — state + layout; `trainingData.json`/`guides.json` are **lazy-loaded** (`import()`), so the app shell (≈170 kB) paints instantly with a loading state while the data chunk downloads in parallel
 
 ## Deploy on Vercel
 

@@ -4,14 +4,9 @@ import ContinentSection from './components/ContinentSection';
 import ResourceModal from './components/ResourceModal';
 import EmptyState from './components/EmptyState';
 import Footer from './components/Footer';
-import data from './data/trainingData.json';
-import guidesData from './data/guides.json';
 import type { Continent, Country, Directory, Guide, Lang } from './lib/types';
 import { countResources, filterCountries, useDebouncedValue } from './lib/search';
 import { dictionary } from './i18n/dictionary';
-
-const directory = data as unknown as Directory;
-const guides = guidesData as unknown as Guide[];
 
 export default function App() {
   const [lang, setLang] = useState<Lang>('en');
@@ -22,6 +17,24 @@ export default function App() {
   const [categories, setCategories] = useState<string[]>([]);
   const [freeOnly, setFreeOnly] = useState(false);
   const [guideId, setGuideId] = useState<string | null>(null);
+  // Code-split data: the app shell boots instantly (loading state) while the
+  // large directory JSON (~1.6 MB source) downloads as a separate chunk.
+  const [directory, setDirectory] = useState<Directory | null>(null);
+  const [guides, setGuides] = useState<Guide[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all([import('./data/trainingData.json'), import('./data/guides.json')])
+      .then(([dataMod, guidesMod]) => {
+        if (cancelled) return;
+        setDirectory(dataMod.default as unknown as Directory);
+        setGuides(guidesMod.default as unknown as Guide[]);
+      })
+      .catch((error) => console.error('Failed to load directory data', error));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const debouncedQuery = useDebouncedValue(query, 200);
 
@@ -37,8 +50,15 @@ export default function App() {
     setCategories((prev) => (prev.includes(id) ? prev.filter((c) => c !== id) : [...prev, id]));
 
   const filtered = useMemo(
-    () => filterCountries(directory.countries as Country[], { query: debouncedQuery, continent, countryCode, categories, freeOnly }),
-    [debouncedQuery, continent, countryCode, categories, freeOnly],
+    () =>
+      filterCountries((directory?.countries ?? []) as Country[], {
+        query: debouncedQuery,
+        continent,
+        countryCode,
+        categories,
+        freeOnly,
+      }),
+    [directory, debouncedQuery, continent, countryCode, categories, freeOnly],
   );
 
   const total = useMemo(() => countResources(filtered), [filtered]);
@@ -54,6 +74,19 @@ export default function App() {
   }, [filtered]);
 
   const activeGuide = guides.find((g) => g.id === guideId) ?? null;
+
+  if (!directory) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+        <span className="text-4xl" role="img" aria-label="globe">
+          🌍
+        </span>
+        <p className="text-sm text-slate-500 dark:text-slate-400" role="status">
+          {t.loading}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
