@@ -18,7 +18,7 @@ npm run dev
 - `src/lib/types.ts` — strict schema
 - `src/lib/search.ts` — normalize + filter logic
 - `src/i18n/dictionary.ts` — EN/FR strings
-- `src/data/trainingData.json` — **195 countries** (6 enriched: ZA/FR/US/IN/AU/BR + 189 with UNESCO/Coursera/Khan/edX), **1013 resources** (incl. **197 national libraries**, 1 per country + ZA/FR extras)
+- `src/data/trainingData.json` — **195 countries** (6 enriched: ZA/FR/US/IN/AU/BR + 189 with UNESCO/Coursera/Khan/edX), **1988 resources** (incl. **197 national libraries**, 1 per country + ZA/FR extras, and **980 free-resource sites**, 5 per country: Internet Archive, MIT OCW, OpenLearn, Saylor, OpenStax)
 - `src/data/guides.json` — Coursera Financial Aid + local tips
 - `src/components/` — Header, ContinentSection, CountryCard, TrainingCard, ResourceModal, EmptyState, Footer
 - `src/App.tsx` — state + layout
