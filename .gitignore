@@ -30,3 +30,5 @@ Thumbs.db
 # vite cache
 *.tsbuildinfo
 __pycache__/
+.vercel
+.env*
