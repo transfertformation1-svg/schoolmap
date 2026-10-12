@@ -1,0 +1,42 @@
+[
+  {
+    "id": "coursera-financial-aid",
+    "title_en": "How to apply for Coursera Financial Aid",
+    "title_fr": "Comment demander l'aide financière Coursera",
+    "steps_en": [
+      "Open the course page and click 'Financial aid available' next to Enroll.",
+      "Click 'Continue to the application' and fill in education + income honestly.",
+      "Write 2 short paragraphs (150+ words): why you need aid + how it helps your career.",
+      "Submit and wait ~15 days for review (you can still audit videos meanwhile).",
+      "Once approved, enroll free and earn the verified certificate.",
+      "Tip: apply on desktop, use English, avoid copy-paste answers."
+    ],
+    "steps_fr": [
+      "Ouvrez la page du cours et cliquez sur 'Aide financière disponible' à côté de S'inscrire.",
+      "Cliquez sur 'Continuer vers la demande' et renseignez éducation + revenus honnêtement.",
+      "Rédigez 2 paragraphes (150+ mots) : pourquoi vous avez besoin d'aide + impact carrière.",
+      "Soumettez et attendez ~15 jours (vous pouvez suivre en audit en attendant).",
+      "Une fois approuvé, inscrivez-vous gratuitement et obtenez le certificat vérifié.",
+      "Astuce : faites la demande sur PC, en anglais, sans copier-coller."
+    ]
+  },
+  {
+    "id": "local-application-tips",
+    "title_en": "Local application tips (connectivity, costs)",
+    "title_fr": "Conseils locaux (connexion, coûts)",
+    "steps_en": [
+      "Use free campus / library WiFi for large video courses and downloads.",
+      "Prefer Audit / Free tracks first, then apply for aid for certificates.",
+      "Check currency: some exams charge in USD — look for student discounts.",
+      "Save PDFs offline where possible for low-data study.",
+      "Join local communities (Umuzi, GirlCode, freeCodeCamp groups) for mentorship."
+    ],
+    "steps_fr": [
+      "Utilisez le WiFi gratuit campus / bibliothèque pour les vidéos.",
+      "Commencez en mode Audit / Gratuit, puis demandez l'aide pour le certificat.",
+      "Vérifiez la devise : certains examens sont en USD — cherchez les réductions étudiantes.",
+      "Téléchargez les PDF pour étudier hors-ligne et économiser les données.",
+      "Rejoignez les communautés locales pour le mentorat."
+    ]
+  }
+]

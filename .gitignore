@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# build
+dist/
+dist-ssr/
+*.local
+
+# logs
+logs/
+*.log
+npm-debug.log*
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# system
+.DS_Store
+Thumbs.db
+
+# vite cache
+*.tsbuildinfo
