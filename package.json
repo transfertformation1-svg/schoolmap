@@ -1,9 +1,9 @@
 {
-  "name": "schoolmap",
+  "name": "schooleduc",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "SchoolMap / Annuaire Mondial des Formations",
+  "description": "schoolEduc / Annuaire Mondial des Formations",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

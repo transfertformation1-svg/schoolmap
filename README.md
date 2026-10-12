@@ -1,4 +1,4 @@
-# SchoolMap / Annuaire Mondial des Formations
+# schoolEduc / Annuaire Mondial des Formations
 
 Modern, responsive, bilingual (EN/FR) directory grouping free & financed learning resources by **Continent > Country (flag) > Category > Training Item**.
 
